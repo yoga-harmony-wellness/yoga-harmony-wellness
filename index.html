@@ -1,1 +1,553 @@
 
+<style>
+/* YOGA & WELLNESS LANDING PAGE */
+.yw-page {
+  --yw-green: #344d3b;
+  --yw-sage: #879681;
+  --yw-cream: #f7f4ed;
+  --yw-sand: #e9e2d5;
+  --yw-text: #303a30;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--yw-text);
+  background: var(--yw-cream);
+  overflow: hidden;
+  line-height: 1.65;
+}
+
+.yw-page * { box-sizing: border-box; }
+
+.yw-page a {
+  text-decoration: none;
+}
+
+.yw-container {
+  width: min(1160px, 90%);
+  margin: 0 auto;
+}
+
+.yw-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--yw-sage);
+}
+
+.yw-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.yw-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .25s ease;
+}
+
+.yw-btn-primary {
+  background: var(--yw-green);
+  color: #fff !important;
+}
+
+.yw-btn-primary:hover {
+  background: #506b54;
+  transform: translateY(-2px);
+}
+
+.yw-btn-light {
+  color: var(--yw-green) !important;
+  border: 1px solid rgba(52,77,59,.4);
+}
+
+.yw-btn-light:hover {
+  background: #fff;
+}
+
+/* HERO */
+.yw-hero {
+  position: relative;
+  min-height: 630px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg,
+      rgba(23,39,29,.78) 0%,
+      rgba(23,39,29,.47) 48%,
+      rgba(23,39,29,.06) 100%),
+    url("https://cdn.shopify.com/s/files/1/0692/2272/7783/files/b391a81f430776cd31a413e0b7dc457d.jpg?v=1792592338")
+    center 45% / cover no-repeat;
+}
+
+.yw-hero-content {
+  width: min(1160px, 90%);
+  margin: 0 auto;
+  padding: 90px 0;
+  color: white;
+}
+
+.yw-hero .yw-eyebrow { color: #e5d9bb; }
+
+.yw-hero h1 {
+  max-width: 680px;
+  margin: 22px 0;
+  font-size: clamp(46px, 7vw, 82px);
+}
+
+.yw-hero p {
+  max-width: 490px;
+  color: #f0eee7;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.yw-hero .yw-btn-primary {
+  background: #f2e9d8;
+  color: var(--yw-green) !important;
+}
+
+.yw-hero .yw-btn-primary:hover {
+  background: white;
+}
+
+.yw-hero-note {
+  margin-top: 24px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #eee7d9;
+}
+
+/* INTRO */
+.yw-intro {
+  padding: 95px 0;
+  text-align: center;
+}
+
+.yw-intro h2 {
+  max-width: 760px;
+  margin: 18px auto;
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.yw-intro p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: #687064;
+  font-size: 15px;
+}
+
+/* BENEFITS */
+.yw-benefits {
+  padding: 75px 0 85px;
+  background: #e9e8de;
+}
+
+.yw-section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.yw-section-heading h2 {
+  font-size: clamp(34px, 4vw, 47px);
+  margin: 12px 0;
+}
+
+.yw-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.yw-benefit {
+  padding: 32px 25px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(52,77,59,.09);
+}
+
+.yw-benefit-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dce1d5;
+  color: var(--yw-green);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.yw-benefit h3 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.yw-benefit p {
+  color: #697064;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* IMAGE GALLERY */
+.yw-gallery {
+  padding: 95px 0;
+}
+
+.yw-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.yw-gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: var(--yw-sand);
+  aspect-ratio: 3 / 4;
+}
+
+.yw-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.yw-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.yw-gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 45px 15px 18px;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  background: linear-gradient(transparent, rgba(20,35,24,.72));
+}
+
+/* WELLNESS MESSAGE */
+.yw-message {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e8e1d5;
+}
+
+.yw-message-image {
+  min-height: 480px;
+  background:
+    url("https://cdn.shopify.com/s/files/1/0692/2272/7783/files/728cf2e32a37cd79b8f912a887e0a2cf.jpg?v=1792592308")
+    center / cover no-repeat;
+}
+
+.yw-message-content {
+  padding: 75px clamp(25px, 6vw, 85px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.yw-message-content h2 {
+  font-size: clamp(35px, 4vw, 51px);
+  margin: 18px 0;
+}
+
+.yw-message-content p {
+  color: #656a5f;
+  font-size: 15px;
+  margin: 0 0 27px;
+}
+
+/* CONTACT */
+.yw-contact {
+  padding: 100px 0;
+  text-align: center;
+  background: var(--yw-green);
+  color: white;
+}
+
+.yw-contact .yw-eyebrow { color: #d6c8a8; }
+
+.yw-contact h2 {
+  max-width: 750px;
+  margin: 18px auto;
+  font-size: clamp(37px, 5vw, 58px);
+}
+
+.yw-contact p {
+  max-width: 590px;
+  margin: 0 auto 30px;
+  color: #e0e6dc;
+  font-size: 15px;
+}
+
+.yw-contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.yw-contact .yw-btn-primary {
+  background: #f2e9d8;
+  color: var(--yw-green) !important;
+}
+
+.yw-contact .yw-btn-light {
+  border-color: rgba(255,255,255,.5);
+  color: white !important;
+}
+
+.yw-contact .yw-btn-light:hover {
+  color: var(--yw-green) !important;
+}
+
+.yw-contact-details {
+  margin-top: 32px;
+  font-size: 13px;
+  color: #e0e6dc;
+  overflow-wrap: anywhere;
+}
+
+.yw-contact-details a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.yw-footer {
+  background: #293c2e;
+  color: #d6ded3;
+  padding: 22px 5%;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .yw-hero { min-height: 570px; }
+  .yw-hero h1 { font-size: clamp(43px, 10vw, 65px); }
+  .yw-benefit-grid { grid-template-columns: 1fr; gap: 14px; }
+  .yw-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .yw-message { grid-template-columns: 1fr; }
+  .yw-message-image { min-height: 360px; }
+  .yw-message-content { padding: 55px 7%; }
+  .yw-intro, .yw-gallery { padding: 65px 0; }
+  .yw-contact { padding: 70px 0; }
+}
+
+@media (max-width: 420px) {
+  .yw-hero { min-height: 520px; }
+  .yw-btn { width: 100%; }
+  .yw-contact-buttons { flex-direction: column; }
+  .yw-gallery-caption { font-size: 17px; }
+}
+</style>
+
+<div class="yw-page">
+
+  <!-- HERO SECTION -->
+  <section class="yw-hero">
+    <div class="yw-hero-content">
+      <span class="yw-eyebrow">Mindful Living · Inner Balance</span>
+      <h1 class="yw-title">Find Your Balance.<br>Reconnect With You.</h1>
+      <p>
+        Step away from the everyday rush and discover a calmer,
+        more mindful way of living. Make space for movement,
+        stillness, and a deeper connection with yourself.
+      </p>
+      <a class="yw-btn yw-btn-primary"
+         href="https://www.myyogacentre.am/en/myyogacentre_en/"
+         target="_blank" rel="noopener">
+        Explore Yoga & Wellness ↗
+      </a>
+      <div class="yw-hero-note">Breathe deeply · Move mindfully · Live fully</div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="yw-intro">
+    <div class="yw-container">
+      <span class="yw-eyebrow">Your Moment of Calm</span>
+      <h2 class="yw-title">Wellness begins when you make time for yourself.</h2>
+      <p>
+        Yoga is more than a practice. It is an invitation to slow down,
+        reconnect with your body, and create a little more balance in
+        your everyday life. Start where you are and take it one breath
+        at a time.
+      </p>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="yw-benefits">
+    <div class="yw-container">
+      <div class="yw-section-heading">
+        <span class="yw-eyebrow">A More Mindful You</span>
+        <h2 class="yw-title">Make Space for Wellbeing</h2>
+      </div>
+
+      <div class="yw-benefit-grid">
+        <article class="yw-benefit">
+          <div class="yw-benefit-icon">❋</div>
+          <h3>Move With Intention</h3>
+          <p>
+            Explore mindful movement and gentle stretches
+            at a pace that feels right for you.
+          </p>
+        </article>
+
+        <article class="yw-benefit">
+          <div class="yw-benefit-icon">☼</div>
+          <h3>Find Inner Calm</h3>
+          <p>
+            Create a peaceful pause in your day through
+            breathing, presence, and relaxation.
+          </p>
+        </article>
+
+        <article class="yw-benefit">
+          <div class="yw-benefit-icon">❀</div>
+          <h3>Build Your Ritual</h3>
+          <p>
+            Make wellness a meaningful part of your routine
+            with small, consistent moments for yourself.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUR-IMAGE GALLERY -->
+  <section class="yw-gallery">
+    <div class="yw-container">
+      <div class="yw-section-heading">
+        <span class="yw-eyebrow">The Art of Slowing Down</span>
+        <h2 class="yw-title">Your Wellness Journey</h2>
+        <p>Find inspiration for a more balanced, mindful lifestyle.</p>
+      </div>
+
+      <div class="yw-gallery-grid">
+        <div class="yw-gallery-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/b391a81f430776cd31a413e0b7dc457d.jpg?v=1792592338"
+            alt="Yoga and wellness inspiration"
+            loading="lazy">
+          <div class="yw-gallery-caption">Find Your Flow</div>
+        </div>
+
+        <div class="yw-gallery-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/6fc9544ca755b24fd689b5ed2101144a.jpg?v=1792592325"
+            alt="Mindful living and wellness"
+            loading="lazy">
+          <div class="yw-gallery-caption">Be Present</div>
+        </div>
+
+        <div class="yw-gallery-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/728cf2e32a37cd79b8f912a887e0a2cf.jpg?v=1792592308"
+            alt="A moment of calm and relaxation"
+            loading="lazy">
+          <div class="yw-gallery-caption">Breathe Deeply</div>
+        </div>
+
+        <div class="yw-gallery-item">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0692/2272/7783/files/23329a13da27c65d5988ce060ef29a1b.jpg?v=1792592308"
+            alt="Yoga-inspired wellness lifestyle"
+            loading="lazy">
+          <div class="yw-gallery-caption">Live Mindfully</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSPIRATION SECTION -->
+  <section class="yw-message">
+    <div class="yw-message-image" role="img"
+         aria-label="Yoga and mindful wellness atmosphere"></div>
+
+    <div class="yw-message-content">
+      <span class="yw-eyebrow">Come Back to Yourself</span>
+      <h2 class="yw-title">Less Noise.<br>More Presence.</h2>
+      <p>
+        You don't need to change everything at once.
+        Begin with one mindful breath, one gentle movement,
+        and one moment dedicated entirely to you.
+        Let your wellness journey unfold naturally.
+      </p>
+      <a class="yw-btn yw-btn-primary"
+         href="https://www.myyogacentre.am/en/myyogacentre_en/"
+         target="_blank" rel="noopener">
+        Discover More
+      </a>
+    </div>
+  </section>
+
+  <!-- FINAL CALL TO ACTION + CONTACT -->
+  <section class="yw-contact">
+    <div class="yw-container">
+      <span class="yw-eyebrow">Your Journey Starts Here</span>
+      <h2 class="yw-title">Ready to Make Time for Yourself?</h2>
+      <p>
+        Take the first step toward a more mindful lifestyle.
+        Get in touch or explore the website to learn more
+        about yoga and wellness.
+      </p>
+
+      <div class="yw-contact-buttons">
+        <a class="yw-btn yw-btn-primary"
+           href="tel:00923456789">
+          ☎ Contact Us
+        </a>
+
+        <a class="yw-btn yw-btn-light"
+           href="mailto:karapetyanqnarik550@gmail.com?subject=Yoga%20and%20Wellness%20Inquiry">
+          ✉ Email Us
+        </a>
+
+        <a class="yw-btn yw-btn-light"
+           href="https://www.myyogacentre.am/en/myyogacentre_en/"
+           target="_blank" rel="noopener">
+          More Information ↗
+        </a>
+      </div>
+
+      <div class="yw-contact-details">
+        <p>
+          Phone:
+          <a href="tel:00923456789">00923456789</a>
+          &nbsp; · &nbsp;
+          Email:
+          <a href="mailto:karapetyanqnarik550@gmail.com">
+            karapetyanqnarik550@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="yw-footer">
+    FIND YOUR BALANCE · BREATHE · GROW · RECONNECT
+  </footer>
+
+</div>
+
